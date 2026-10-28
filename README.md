@@ -166,3 +166,4 @@ Comprobación del sitio con el servidor en marcha (arrancado con `src/index.js`,
 ## Seguridad
 
 No se publican `.env`, credenciales ni datos personales: `.env` y `node_modules/` están en `.gitignore`, `.env.example` contiene solo marcadores y los datos de las reservas son ficticios.
+# NODO_tp8_salas_http_mongodb
