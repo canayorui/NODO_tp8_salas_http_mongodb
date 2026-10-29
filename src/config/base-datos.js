@@ -34,9 +34,9 @@ async function conectarBaseDatos() {
     throw error;
   }
 
-  if (baseDatos !== "reservas_salas_u7") {
+  if (baseDatos !== "reservas_salas_u8") {
     const error = new Error(
-      "MONGODB_URI debe apuntar a la base de datos reservas_salas_u7",
+      "MONGODB_URI debe apuntar a la base de datos reservas_salas_u8",
     );
     error.code = "MONGODB_DATABASE_INVALID";
     throw error;
