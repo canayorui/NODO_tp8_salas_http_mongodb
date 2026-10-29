@@ -1,9 +1,9 @@
 {
-  "name": "tp-07-salas-mongodb",
+  "name": "tp-08-salas-http-mongodb",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node --env-file=.env src/index.js",
     "format": "prettier --write src scripts",
     "format:check": "prettier --check src scripts",
     "lint": "eslint src scripts",
