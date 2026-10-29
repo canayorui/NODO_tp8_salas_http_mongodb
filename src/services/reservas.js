@@ -1,25 +1,22 @@
-function crearServicioReservas(datosIniciales) {
-  let reservas = [...datosIniciales];
+const Reserva = require("../modelos/reserva");
 
-  function listar() {
-    return reservas;
-  }
-
-  function buscarPorId(id) {
-    return reservas.find((reserva) => String(reserva.id) === String(id));
-  }
-
-  function contar() {
-    return reservas.length;
-  }
-
-  function crear(reservaValidada) {
-    const nueva = { id: reservas.length + 1, ...reservaValidada };
-    reservas.push(nueva);
-    return nueva;
-  }
-
-  return { listar, buscarPorId, contar, crear };
+async function listar(filtro = {}) {
+  return Reserva.find(filtro);
+}
+async function buscarPorId(id) {
+  return Reserva.findById(id);
+}
+async function crear(datos) {
+  const reserva = new Reserva(datos);
+  return reserva.save();
+}
+async function contar() {
+  return Reserva.countDocuments();
 }
 
-module.exports = crearServicioReservas;
+module.exports = {
+  listar,
+  buscarPorId,
+  crear,
+  contar,
+};

@@ -37,6 +37,11 @@ const reservaSchema = new mongoose.Schema(
         validator: Number.isInteger,
       },
     },
+    estado: {
+      type: String,
+      enum: ["pendiente", "confirmada"],
+      default: "pendiente",
+    },
   },
   {
     collection: "reservas",
